@@ -1,15 +1,20 @@
-def BubbleSort(inputList):
+def bubbleSort(list):
     swap = True
     while swap:
         swap = False
-        for i in range(len(inputList)):
-            if i < (len(inputList) - 1) and inputList[i] > inputList[i + 1]:
+        for i in range(len(list)):
+            if i < (len(list) - 1) and list[i] > list[i + 1]:
                 swap = True
-                tmp = inputList[i]
-                inputList[i] = inputList[i + 1]
-                inputList[i + 1] = tmp
-    return inputList
+                tmp = list[i]
+                list[i] = list[i + 1]
+                list[i + 1] = tmp
+    return list
 
 
-inputList = [8, 9, 1, 9, 8, 6, 5, 3, 2, 1]
-print(BubbleSort(inputList))
+if __name__ == '__main__':
+    inputList = [8, 9, 1, 9, 8, 6, 5, 3, 2, 1]
+    print('Input:')
+    print(inputList, end="\n\n")
+    inputList = bubbleSort(inputList)
+    print('Output:')
+    print(inputList, end="\n\n")
